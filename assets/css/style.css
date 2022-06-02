@@ -1,3 +1,45 @@
-body {
-    background-color: aqua;
+
+.card {
+    border: 5px double rgb(9, 7, 7);
+    margin: 15px;
+    width: 15rem;
+    height: 20rem;  
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;   
+}
+
+.button{
+  background-color: #eee5e5;
+  border-radius: 10px;
+  border: 4px double #181717;
+  width: 120px;
+  position: absolute;
+  margin:20em;
+  padding: .5em;
+}
+
+h2{
+    text-align: center;
+    position: absolute;
+    font-size: 2em;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: aliceblue;
+}
+
+p{
+    color: rgb(13, 13, 16);
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+}
+
+#results{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+img{
+    width: 15rem;
+    height: 20rem;  
 }
