@@ -18,10 +18,8 @@ axios.get("http://localhost:5050/api/planets")
     const img = document.createElement('img');
     img.src = "assets/images/mort.png"
     
-    
     const title = document.createElement('h2');
     title.innerHTML = item.name;
-
 
     card.appendChild(img);
     card.appendChild(button);
