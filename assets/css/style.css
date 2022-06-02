@@ -27,9 +27,9 @@
     height: 100vh;
     width: 80%;
     margin: auto;
-    margin-top: 50px;
+    margin-top: 25px;
     border-radius: 20px;
-    margin-bottom: 50px;
+    margin-bottom: 25px;
 }
 
 .filter_bar{
@@ -37,7 +37,7 @@
     width: 80%; 
     height: 80px;
     margin: auto;
-    margin-top: 50px;
+    margin-top: 25px;
     border-radius: 20px;
 }
 
@@ -70,6 +70,14 @@
     justify-content: center;
     margin-top: 10px;
     margin-bottom: 10px;
+}
 
-    
+.h1{
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-size: x-large;
+    font-weight: bolder ;
+    margin-top: 10px;
 }
