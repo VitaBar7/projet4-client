@@ -1,13 +1,28 @@
-const express = require('express');
-const data = require('./data.json');
-const axios = require('axios');
-const cors = require('cors');
-const app = express();
+const divResult = document.getElementById('results');
 
-app.get("/", (req, res) => {
-    res.send("hello la team!").status(200);
-});
+axios.get("http://localhost:5050/api/planets")
+.then(response => response.data)
+.then(data => data.results.map(item => {
 
-app.listen(port, () => {
-    console.log(`Server is running on port ${port}`);
-});
+    const card = document.createElement('div');
+    card.classList.add('card');
+   
+    const button = document.createElement('button');
+    button.classList.add('button');
+    button.textContent ="Plus d'infos..."
+    button.style.fontFamily = "Verdana, Geneva, Tahoma, sans-serif"
+    button.onclick = function(){
+        window.open("https://fr.wikipedia.org/wiki/Liste_des_astres_de_Star_Wars")
+    };
+       
+    const img = document.createElement('img');
+    img.src = "assets/images/mort.png"
+    
+    const title = document.createElement('h2');
+    title.innerHTML = item.name;
+
+    card.appendChild(img);
+    card.appendChild(button);
+    card.appendChild(title);
+    divResult.appendChild(card);
+}))
