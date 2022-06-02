@@ -7,11 +7,45 @@
     <link rel="stylesheet" href="./assets/css/style.css">
     <title>projet4</title>
 </head>
+  
 <body>
 
-    <div id="results"></div>
-     
-<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.0.0-alpha.1/axios.min.js" integrity="sha512-xIPqqrfvUAc/Cspuj7Bq0UtHNo/5qkdyngx6Vwt+tmbvTLDszzXM0G6c91LXmGrRx8KEPulT+AfOOez+TeVylg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="./assets/js/main.js"></script>    
+  <div id="results"></div> 
+
+    <!-- Sound-->
+
+<div class="playSong">
+     <img src="assets/IcRoundPlayArrow.svg" id="icon">
+</div>
+
+<audio autoplay id="mySong">
+  <source src="assets/StarWars_Song.mp3" type="audio/mp3">
+</audio>
+
+<script>
+    //let bodyAll = document.querySelector("body")
+    let mySong = document.getElementById("mySong");
+    let icon = document.getElementById("icon");
+    // bodyAll.addEventListener("mousemove",e=> {
+    //     mySong.play();
+    // });
+    
+    icon.onclick= function(){
+          if(mySong.paused){
+                mySong.play();
+                icon.src="assets/IcRoundVolumeUp.svg";
+          }
+          else{
+                mySong.pause();
+                icon.src = "assets/IcRoundVolumeOff.svg"
+                
+          }
+          
+      }
+          
+</script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js" integrity="sha512-odNmoc1XJy5x1TMVMdC7EMs3IVdItLPlCeL5vSUPN2llYKMJ2eByTTAIiiuqLg+GdNr9hF6z81p27DArRFKT7A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="assets/js/main.js"></script>    
 </body>
 </html>
