@@ -4,10 +4,63 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/client/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
     <title>projet4</title>
+    
 </head>
 <body>
-<script src="assets/js/front.js"></script>    
+    <!-- Sound-->
+
+<div class="playSong">
+    
+    <img src="assets/IcRoundPlayArrow.svg" id="icon">
+</div>
+
+<audio autoplay id="mySong">
+  <source src="assets/StarWars_Song.mp3" type="audio/mp3">
+</audio>
+
+<script>
+    //let bodyAll = document.querySelector("body")
+    let mySong = document.getElementById("mySong");
+    let icon = document.getElementById("icon");
+    // bodyAll.addEventListener("mousemove",e=> {
+    //     mySong.play();
+    // });
+    
+    icon.onclick= function(){
+          if(mySong.paused){
+                mySong.play();
+                icon.src="assets/IcRoundVolumeUp.svg";
+          }
+          else{
+                mySong.pause();
+                icon.src = "assets/IcRoundVolumeOff.svg"
+                
+
+          }
+          
+      }
+      
+        
+          
+</script>
+
+
+<section id = "planets">
+    <h3>planets section</h3>
+    <div class="fiche" id = "planets section" ></div>
+</section>
+<section id = "items">
+    <h3>items section</h3>
+    <div class = "fiche" id = "items section"></div>
+</section>
+<section id = "characters">
+    <h3>characters section</h3>
+    <div class = "fiche" id = "characters section"></div>
+</section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js" integrity="sha512-odNmoc1XJy5x1TMVMdC7EMs3IVdItLPlCeL5vSUPN2llYKMJ2eByTTAIiiuqLg+GdNr9hF6z81p27DArRFKT7A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="assets/js/main.js"></script>    
 </body>
 </html>
